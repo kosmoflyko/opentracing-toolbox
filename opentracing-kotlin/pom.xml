@@ -39,6 +39,16 @@
       <artifactId>kotest-runner-junit5-jvm</artifactId>
       <version>${kotest.version}</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jetbrains.kotlinx</groupId>
+          <artifactId>kotlinx-coroutines-core</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.jetbrains.kotlinx</groupId>
+          <artifactId>kotlinx-coroutines-core-jvm</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>io.kotest</groupId>
@@ -49,6 +59,10 @@
         <exclusion>
           <groupId>org.jetbrains.kotlinx</groupId>
           <artifactId>kotlinx-coroutines-jdk8</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.jetbrains.kotlinx</groupId>
+          <artifactId>kotlinx-coroutines-core-jvm</artifactId>
         </exclusion>
         <exclusion>
           <groupId>org.jetbrains.kotlin</groupId>
